@@ -38,7 +38,7 @@ jobs:
       # -----------------------------
       - name: Run CodeScan On Push
         if: github.event_name == 'push'
-        uses: codescan-io/codescan-scanner-action@cd9694sarif1
+        uses: codescan-io/codescan-scanner-action@prerelease-3.1
         with:
           scanChangedFilesOnly: true
           organization: release-26-0-22
@@ -54,7 +54,7 @@ jobs:
       # -----------------------------
       - name: Run CodeScan On PR
         if: github.event_name == 'pull_request'
-        uses: codescan-io/codescan-scanner-action@cd9694sarif1
+        uses: codescan-io/codescan-scanner-action@prerelease-3.1
         with:
           scanChangedFilesOnly: true
           organization: release-26-0-22
